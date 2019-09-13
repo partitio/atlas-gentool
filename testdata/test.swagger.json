@@ -1,0 +1,97 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Example",
+    "version": "1.0",
+    "contact": {
+      "name": "John Belamaric",
+      "url": "https://github.com/infobloxopen/atlas-contacts-app",
+      "email": "jbelamaric@infoblox.com"
+    }
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/example": {
+      "get": {
+        "operationId": "Something",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/testExample"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "email_address",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "user_name",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "ExampleService"
+        ]
+      },
+      "post": {
+        "operationId": "Create",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/testExample"
+            }
+          }
+        },
+        "tags": [
+          "ExampleService"
+        ]
+      }
+    },
+    "/test": {
+      "post": {
+        "operationId": "Test",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/testExample"
+            }
+          }
+        },
+        "tags": [
+          "ExampleService"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "testExample": {
+      "type": "object",
+      "properties": {
+        "email_address": {
+          "type": "string"
+        },
+        "user_name": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
